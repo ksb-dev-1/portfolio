@@ -47,7 +47,7 @@ const AnimatedHamburgerButton = ({
           setActive((pv) => !pv);
           toggleSideNav();
         }}
-        className="relative h-12 w-12 rounded-full transition-colors bg-white/10 hover:bg-white/20"
+        className="relative h-12 w-12 rounded-full transition-colors hover:bg-white/10"
       >
         <motion.span
           variants={VARIANTS.top}

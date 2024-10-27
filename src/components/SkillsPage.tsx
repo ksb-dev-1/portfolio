@@ -343,15 +343,15 @@ const NestedCirclesForSmallScreen = () => {
         <div className="relative flex items-center justify-center">
           {/* Outer Circle */}
           <ScrollParallax>
-            <div className="relative w-[350px] h-[350px] rounded-full border border-[#47577f] flex items-center justify-center">
+            <div className="relative w-[325px] h-[325px] rounded-full border border-[#47577f] flex items-center justify-center">
               {/* 2nd Circle */}
-              <div className="absolute w-[290px] h-[290px] rounded-full border border-[#47577f] flex items-center justify-center">
+              <div className="absolute w-[265px] h-[265px] rounded-full border border-[#47577f] flex items-center justify-center">
                 {/* 3rd Circle */}
-                <div className="absolute w-[220px] h-[220px] rounded-full border border-[#47577f] flex items-center justify-center">
+                <div className="absolute w-[195px] h-[195px] rounded-full border border-[#47577f] flex items-center justify-center">
                   {/* 4th Circle */}
-                  <div className="absolute w-[150px] h-[150px] rounded-full border border-[#47577f] flex items-center justify-center">
+                  <div className="absolute w-[125px] h-[125px] rounded-full border border-[#47577f] flex items-center justify-center">
                     {/* 5th Circle */}
-                    <div className="absolute w-[80px] h-[80px] rounded-full border border-[#47577f] flex items-center justify-center"></div>
+                    <div className="absolute w-[55px] h-[55px] rounded-full border border-[#47577f] flex items-center justify-center"></div>
                   </div>
                 </div>
               </div>
@@ -373,7 +373,7 @@ const NestedCirclesForSmallScreen = () => {
                 />
                 <span className="text-xs">Sass</span>
               </div>
-              <div className="absolute -bottom-[20px] flex flex-col items-center">
+              <div className="absolute -bottom-[25px] flex flex-col items-center">
                 <div className="relative h-[30px] w-[30px] bg-white rounded-full">
                   <Image
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg"
@@ -406,7 +406,7 @@ const NestedCirclesForSmallScreen = () => {
                 </div>
                 <span className="text-xs">Prisma</span>
               </div>
-              <div className="absolute top-[275px] left-[15px] flex flex-col items-center">
+              <div className="absolute top-[275px] left-[45px] flex flex-col items-center">
                 <div className="relative h-[30px] w-[30px] bg-white rounded-full">
                   <Image
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/framermotion/framermotion-original.svg"
@@ -418,7 +418,7 @@ const NestedCirclesForSmallScreen = () => {
                 </div>
                 <span className="text-xs">Framer</span>
               </div>
-              <div className="absolute top-[160px] right-[160px] flex flex-col items-center">
+              <div className="absolute top-[147px] right-[144px] flex flex-col items-center">
                 <Image
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg"
                   alt="Next.js"
@@ -427,7 +427,7 @@ const NestedCirclesForSmallScreen = () => {
                 />
                 <span className="text-xs">Next.js</span>
               </div>
-              <div className="absolute top-[275px] right-[15px] flex flex-col items-center">
+              <div className="absolute top-[275px] right-[45px] flex flex-col items-center">
                 <Image
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg"
                   alt="React.js"
@@ -436,7 +436,7 @@ const NestedCirclesForSmallScreen = () => {
                 />
                 <span className="text-xs">React.js</span>
               </div>
-              <div className="absolute top-[50px] right-[calc(350px-190px)] flex flex-col items-center">
+              <div className="absolute top-[50px] right-[calc(350px-205px)] flex flex-col items-center">
                 <Image
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg"
                   alt="CSS"
@@ -463,7 +463,7 @@ const NestedCirclesForSmallScreen = () => {
                 />
                 <span className="text-xs">Tailwind</span>
               </div>
-              <div className="absolute top-[200px] right-[calc(350px-125px)] flex flex-col items-center">
+              <div className="absolute top-[200px] right-[calc(350px-145px)] flex flex-col items-center">
                 <Image
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg"
                   alt="Typescript"
@@ -472,7 +472,7 @@ const NestedCirclesForSmallScreen = () => {
                 />
                 <span className="text-xs">Typescript</span>
               </div>
-              <div className="absolute top-[100px] right-[calc(350px-100px)] flex flex-col items-center">
+              <div className="absolute top-[100px] right-[calc(350px-120px)] flex flex-col items-center">
                 <Image
                   src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg"
                   alt="HTML"

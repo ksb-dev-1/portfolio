@@ -52,7 +52,14 @@ export default function Header() {
         <div className="max-w-6xl w-full flex items-center justify-between px-4 sm:px-8">
           <div className="w-fit lg:max-w-[33.33%] lg:w-full">
             <RevealAnimation>
-              <motion.div className="text-primary text-2xl font-extrabold">
+              <motion.div
+                className="text-primary text-2xl font-extrabold"
+                onClick={() => {
+                  closeSideNav();
+                  setIsSideNavOpen(false);
+                  setActive(false);
+                }}
+              >
                 <FlipAnimation href="#home">{title}</FlipAnimation>
               </motion.div>
             </RevealAnimation>

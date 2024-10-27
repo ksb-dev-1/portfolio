@@ -34,11 +34,11 @@ const SideNav = forwardRef<HTMLDivElement, SideNavProps>(
     return (
       <div
         ref={ref}
-        className={`fixed top-20 left-0 right-0 bottom-0 bg-primary z-40 ${
+        className={`fixed top-20 left-0 right-0 bottom-0 backdrop-blur-xl z-40 ${
           isSideNavOpen
             ? "translate-y-0 scale-100"
             : "translate-y-[120%] scale-0"
-        } transition`}
+        }`}
       >
         {/* <Image
           src={HeroBG}
@@ -50,13 +50,13 @@ const SideNav = forwardRef<HTMLDivElement, SideNavProps>(
 
         <div className="absolute z-[60] top-0 left-0 right-0 bottom-0 bg-[rgba(56,189,248,0.75)]"></div> */}
 
-        <nav className="absolute z-[70] top-0 left-0 right-0 bottom-0 text-white flex flex-col items-center justify-center font-extrabold text-4xl">
+        <nav className="absolute z-[70] top-0 left-0 right-0 bottom-0 text-white flex flex-col items-center justify-center font-semibold text-4xl">
           {links.map((link, i) => {
             return (
               <motion.div
                 ref={animRef}
                 key={i}
-                className="my-4"
+                className="my-4 hover:text-primary"
                 variants={{
                   hidden: {
                     opacity: 0,
@@ -73,8 +73,10 @@ const SideNav = forwardRef<HTMLDivElement, SideNavProps>(
                 animate={animationControl}
                 exit="hidden"
                 transition={{
+                  type: "spring",
+                  stiffness: 100,
                   duration: 0.3,
-                  ease: "linear",
+                  //ease: "linear",
                   delay: i * 0.1,
                 }}
                 onClick={() => {

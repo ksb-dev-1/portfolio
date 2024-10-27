@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { motion } from "framer-motion";
+import { motion, useScroll } from "framer-motion";
 import { ScrollParallax } from "react-just-parallax";
 
 //public
@@ -14,8 +14,13 @@ import RevealAnimation from "@/components/animations/RevealAnimation";
 import SkillsPage from "@/components/SkillsPage";
 
 export default function Home() {
+  const { scrollYProgress } = useScroll();
   return (
     <>
+      <motion.div
+        className="progress-bar"
+        style={{ scaleX: scrollYProgress }}
+      />
       <div
         id="home"
         className="relative min-h-screen w-screen flex flex-col items-center justify-center overflow-x-hidden lg:overflow-hidden pt-36 pb-16 lg:py:0"
@@ -61,7 +66,7 @@ export default function Home() {
           </div>
 
           <motion.div
-            className="relative h-60 w-60 lg:h-80 lg:w-80 rounded-full lg:mb-32"
+            className="relative h-60 w-60 lg:h-80 lg:w-80 rounded-full lg:mb-32 ml-16 sm:ml-0"
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
@@ -69,28 +74,32 @@ export default function Home() {
               ease: "linear",
             }}
           >
-            <div className="absolute top-[20%] right-8 rounded-full h-52 w-52 lg:h-72 lg:w-72 border-2 border-primary">
-              <div className="absolute top-12 -right-8 rounded-full h-16 w-16 lg:h-24 lg:w-24 border-2 border-white"></div>
-              <div className="absolute top-36 -left-8 rounded-full h-24 w-24 lg:h-36 lg:w-36 border-2 border-white"></div>
+            <div className="absolute top-[20%] right-8 rounded-full h-60 w-60 lg:h-72 lg:w-72 border-2 border-primary">
+              <div className="absolute top-12 -right-8 rounded-full h-20 w-20 lg:h-24 lg:w-24 border-2 border-white"></div>
+              <div className="absolute top-36 -left-8 rounded-full h-32 w-32 lg:h-36 lg:w-36 border-2 border-white"></div>
               <ScrollParallax>
-                <motion.div
-                  className="absolute -right-0 -top-12 h-40 w-40 lg:h-48 lg:w-48 rounded-full bg-slate-400 shadow-[0_0_50px_#38BDF8]"
-                  animate={{ rotate: [0, 360] }}
-                  transition={{
-                    type: "spring",
-                    stiffness: 100,
-                    duration: 0.3,
-                  }}
-                >
-                  <Image
-                    src={ProfileImage}
-                    alt="profile image"
-                    fill
-                    priority
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    className="object-contain rounded-full"
-                  />
-                </motion.div>
+                <div className="-right-0 -top-12 absolute h-48 w-48 lg:h-56 lg:w-56 bg-[rgba(56,189,248,0.25)] rounded-full">
+                  <div className="absolute h-44 w-44 lg:h-52 lg:w-52 bg-[rgba(56,189,248,0.5)] rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                    <motion.div
+                      className="absolute top-2 left-2 h-40 w-40 lg:h-48 lg:w-48 rounded-full bg-slate-400"
+                      animate={{ rotate: [0, 360] }}
+                      transition={{
+                        type: "spring",
+                        stiffness: 100,
+                        duration: 0.3,
+                      }}
+                    >
+                      <Image
+                        src={ProfileImage}
+                        alt="profile image"
+                        fill
+                        priority
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        className="object-contain rounded-full"
+                      />
+                    </motion.div>
+                  </div>
+                </div>
               </ScrollParallax>
             </div>
           </motion.div>
