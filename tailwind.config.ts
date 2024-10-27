@@ -12,6 +12,21 @@ const config: Config = {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      textColor: {
+        //primary: "#0AFF9D",
+        primary: "#38BDF8",
+        secondary: "#0b1120",
+      },
+      backgroundColor: {
+        //primary: "#0AFF9D",
+        primary: "#38BDF8",
+        secondary: "#0b1120",
+      },
+      borderColor: {
+        //primary: "#0AFF9D",
+        primary: "#38BDF8",
+        secondary: "#0b1120",
+      },
     },
   },
   plugins: [],
