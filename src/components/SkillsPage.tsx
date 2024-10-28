@@ -22,7 +22,7 @@ export default function Skills() {
                 href="https://developer.mozilla.org/en-US/docs/Web/HTML"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-4 py-2 bg-secondary ml-2 mb-2 hover:bg-primary transition"
+                className="inline-block px-4 py-2 bg-secondary ml-2 mb-2 hover:bg-primary hover:text-secondary transition"
               >
                 HTML
               </Link>
@@ -30,7 +30,7 @@ export default function Skills() {
                 href="https://developer.mozilla.org/en-US/docs/Web/CSS"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-4 py-2 bg-secondary ml-2 mb-2 hover:bg-primary transition"
+                className="inline-block px-4 py-2 bg-secondary ml-2 mb-2 hover:bg-primary hover:text-secondary transition"
               >
                 CSS
               </Link>
@@ -45,7 +45,7 @@ export default function Skills() {
                 href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-4 py-2 bg-secondary ml-2 mb-2 hover:bg-primary transition"
+                className="inline-block px-4 py-2 bg-secondary ml-2 mb-2 hover:bg-primary hover:text-secondary transition"
               >
                 Javascript
               </Link>
@@ -53,7 +53,7 @@ export default function Skills() {
                 href="https://www.typescriptlang.org/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-4 py-2 bg-secondary ml-2 mb-2 hover:bg-primary transition"
+                className="inline-block px-4 py-2 bg-secondary ml-2 mb-2 hover:bg-primary hover:text-secondary transition"
               >
                 Typescript
               </Link>
@@ -66,7 +66,7 @@ export default function Skills() {
                 href="https://react.dev/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-4 py-2 bg-secondary ml-2 mb-2 hover:bg-primary transition"
+                className="inline-block px-4 py-2 bg-secondary ml-2 mb-2 hover:bg-primary hover:text-secondary transition"
               >
                 React.js
               </Link>
@@ -74,7 +74,7 @@ export default function Skills() {
                 href="https://tailwindcss.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-4 py-2 bg-secondary ml-2 mb-2 hover:bg-primary transition"
+                className="inline-block px-4 py-2 bg-secondary ml-2 mb-2 hover:bg-primary hover:text-secondary transition"
               >
                 Tailwind
               </Link>
@@ -82,7 +82,7 @@ export default function Skills() {
                 href="https://redux-toolkit.js.org/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-4 py-2 bg-secondary ml-2 mb-2 hover:bg-primary transition"
+                className="inline-block px-4 py-2 bg-secondary ml-2 mb-2 hover:bg-primary hover:text-secondary transition"
               >
                 Redux Toolkit
               </Link>
@@ -90,7 +90,7 @@ export default function Skills() {
                 href="https://tanstack.com/query/latest"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-4 py-2 bg-secondary ml-2 mb-2 hover:bg-primary transition"
+                className="inline-block px-4 py-2 bg-secondary ml-2 mb-2 hover:bg-primary hover:text-secondary transition"
               >
                 Tanstack Query
               </Link>
@@ -98,7 +98,7 @@ export default function Skills() {
                 href="https://zod.dev/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-4 py-2 bg-secondary ml-2 mb-2 hover:bg-primary transition"
+                className="inline-block px-4 py-2 bg-secondary ml-2 mb-2 hover:bg-primary hover:text-secondary transition"
               >
                 Zod
               </Link>
@@ -106,7 +106,7 @@ export default function Skills() {
                 href="https://www.prisma.io/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-4 py-2 bg-secondary ml-2 mb-2 hover:bg-primary transition"
+                className="inline-block px-4 py-2 bg-secondary ml-2 mb-2 hover:bg-primary hover:text-secondary transition"
               >
                 Prisma
               </Link>
@@ -114,7 +114,7 @@ export default function Skills() {
                 href="https://www.framer.com/motion/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-4 py-2 bg-secondary ml-2 mb-2 hover:bg-primary transition"
+                className="inline-block px-4 py-2 bg-secondary ml-2 mb-2 hover:bg-primary hover:text-secondary transition"
               >
                 Framer Motion
               </Link>
@@ -122,7 +122,7 @@ export default function Skills() {
                 href="https://authjs.dev/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-4 py-2 bg-secondary ml-2 mb-2 hover:bg-primary transition"
+                className="inline-block px-4 py-2 bg-secondary ml-2 mb-2 hover:bg-primary hover:text-secondary transition"
               >
                 Auth.js
               </Link>
@@ -135,7 +135,7 @@ export default function Skills() {
                 href="https://nextjs.org/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-4 py-2 bg-secondary ml-2 mb-2 hover:bg-primary transition"
+                className="inline-block px-4 py-2 bg-secondary ml-2 mb-2 hover:bg-primary hover:text-secondary transition"
               >
                 Next.js
               </Link>
@@ -143,7 +143,7 @@ export default function Skills() {
                 href="https://expressjs.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-4 py-2 bg-secondary ml-2 mb-2 hover:bg-primary transition"
+                className="inline-block px-4 py-2 bg-secondary ml-2 mb-2 hover:bg-primary hover:text-secondary transition"
               >
                 Express.js
               </Link>
@@ -156,7 +156,7 @@ export default function Skills() {
                 href="https://git-scm.com/"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-4 py-2 bg-secondary ml-2 mb-2 hover:bg-primary transition"
+                className="inline-block px-4 py-2 bg-secondary ml-2 mb-2 hover:bg-primary hover:text-secondary transition"
               >
                 Git
               </Link>
@@ -178,7 +178,7 @@ const NestedCircles = () => {
   return (
     <>
       <div className="flex items-center justify-center py-16">
-        <div className="relative flex items-center justify-center pl-4">
+        <div className="relative flex items-center justify-center ml-6">
           {/* Outer Circle */}
           <ScrollParallax>
             <div className="relative w-[500px] h-[500px] rounded-full border border-[#47577f] flex items-center justify-center">
@@ -211,7 +211,7 @@ const NestedCircles = () => {
                 />
                 <span>Sass</span>
               </div>
-              <div className="absolute -bottom-[25px] flex flex-col items-center">
+              <div className="absolute -bottom-[40px] flex flex-col items-center">
                 <div className="relative h-[50px] w-[50px] bg-white rounded-full">
                   <Image
                     src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg"

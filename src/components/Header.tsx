@@ -3,16 +3,14 @@
 import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 
-//import { useHeaderScroll } from "@/hooks/useHeaderScroll";
-
 import RevealAnimation from "./animations/RevealAnimation";
 import FlipAnimation from "./animations/FlipAnimation";
-import HamburgerButton from "./HamburgerButton";
 import SideNav from "./SideNav";
 
 import { FaGithub } from "react-icons/fa";
+import { IoMdMenu } from "react-icons/io";
 
-export const links = [
+const links = [
   { name: "Skills", href: "#skills" },
   { name: "Projects", href: "#projects" },
   { name: "Contact", href: "#contact" },
@@ -20,21 +18,17 @@ export const links = [
 
 export default function Header() {
   const [isSideNavOpen, setIsSideNavOpen] = useState<boolean>(false);
-  const [active, setActive] = useState<boolean>(false);
   const headerRef = useRef<HTMLDivElement>(null);
   const sideNavRef = useRef<HTMLDivElement>(null);
   const title = "KSB-DEV";
 
-  //useHeaderScroll(headerRef);
-
-  const toggleSideNav = () => setIsSideNavOpen((prev) => !prev);
+  const showSideNav = () => setIsSideNavOpen(true);
   const closeSideNav = () => setIsSideNavOpen(false);
 
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 768) {
         setIsSideNavOpen(false);
-        setActive(false);
       }
     };
     handleResize();
@@ -47,17 +41,16 @@ export default function Header() {
     <>
       <div
         ref={headerRef}
-        className="fixed z-30 top-0 left-0 right-0 h-20 flex justify-center backdrop-blur-xl"
+        className="fixed z-30 top-0 left-0 right-0 h-20 flex justify-center backdrop-blur-2xl"
       >
         <div className="max-w-6xl w-full flex items-center justify-between px-4 sm:px-8">
           <div className="w-fit lg:max-w-[33.33%] lg:w-full">
             <RevealAnimation>
               <motion.div
-                className="text-primary text-2xl font-extrabold"
+                className="text-primary text-2xl font-extrabold ml-2"
                 onClick={() => {
                   closeSideNav();
                   setIsSideNavOpen(false);
-                  setActive(false);
                 }}
               >
                 <FlipAnimation href="#home">{title}</FlipAnimation>
@@ -108,21 +101,16 @@ export default function Header() {
               initial={{ scale: 0 }}
               animate={{ scale: 1 }}
               transition={{ duration: 0.3, ease: "linear" }}
+              className="text-white cursor-pointer block md:hidden"
+              onClick={() => showSideNav()}
             >
-              <HamburgerButton
-                active={active}
-                setActive={setActive}
-                toggleSideNav={toggleSideNav}
-              />
+              <IoMdMenu className="text-4xl" />
             </motion.span>
           </div>
         </div>
       </div>
       <SideNav
-        active={active}
-        setActive={setActive}
         isSideNavOpen={isSideNavOpen}
-        setIsSideNavOpen={setIsSideNavOpen}
         closeSideNav={closeSideNav}
         ref={sideNavRef}
       />

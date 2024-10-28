@@ -79,9 +79,9 @@ export default function Home() {
               <div className="absolute top-36 -left-8 rounded-full h-32 w-32 lg:h-36 lg:w-36 border-2 border-white"></div>
               <ScrollParallax>
                 <div className="-right-0 -top-12 absolute h-48 w-48 lg:h-56 lg:w-56 bg-[rgba(56,189,248,0.25)] rounded-full">
-                  <div className="absolute h-44 w-44 lg:h-52 lg:w-52 bg-[rgba(56,189,248,0.5)] rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                  <div className="absolute h-44 w-44 lg:h-52 lg:w-52 bg-[rgba(56,189,248,0.4)] rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
                     <motion.div
-                      className="absolute top-2 left-2 h-40 w-40 lg:h-48 lg:w-48 rounded-full bg-slate-400"
+                      className="absolute top-2 left-2 h-40 w-40 lg:h-48 lg:w-48 rounded-full bg-slate-200"
                       animate={{ rotate: [0, 360] }}
                       transition={{
                         type: "spring",

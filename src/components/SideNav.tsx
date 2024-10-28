@@ -1,23 +1,24 @@
-import { useEffect, useRef, forwardRef, Dispatch, SetStateAction } from "react";
-//import Image from "next/image";
+import { useEffect, useRef, forwardRef } from "react";
 import Link from "next/link";
-
-import { links } from "./Header";
 
 import { motion, useInView, useAnimation } from "framer-motion";
 
-//import HeroBG from "../../public/assets/hero-bg.svg";
+import { IoMdClose } from "react-icons/io";
+
+const links = [
+  { name: "Home", href: "#home" },
+  { name: "Skills", href: "#skills" },
+  { name: "Projects", href: "#projects" },
+  { name: "Contact", href: "#contact" },
+];
 
 interface SideNavProps {
   isSideNavOpen: boolean;
-  setIsSideNavOpen: Dispatch<SetStateAction<boolean>>;
   closeSideNav: () => void;
-  active: boolean;
-  setActive: Dispatch<SetStateAction<boolean>>;
 }
 
 const SideNav = forwardRef<HTMLDivElement, SideNavProps>(
-  ({ isSideNavOpen, setIsSideNavOpen, closeSideNav, setActive }, ref) => {
+  ({ isSideNavOpen, closeSideNav }, ref) => {
     const animRef = useRef(null);
     const isInView = useInView(animRef);
 
@@ -34,23 +35,20 @@ const SideNav = forwardRef<HTMLDivElement, SideNavProps>(
     return (
       <div
         ref={ref}
-        className={`fixed top-20 left-0 right-0 bottom-0 backdrop-blur-xl z-40 ${
+        className={`fixed top-0 left-0 right-0 bottom-0 backdrop-blur-2xl z-40 ${
           isSideNavOpen
             ? "translate-y-0 scale-100"
             : "translate-y-[120%] scale-0"
         }`}
       >
-        {/* <Image
-          src={HeroBG}
-          alt="Hero"
-          fill
-          className="absolute z-50 object-cover"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
-        />
+        <span
+          className="text-white absolute top-6 right-4 z-[80] cursor-pointer"
+          onClick={() => closeSideNav()}
+        >
+          <IoMdClose className="text-4xl" />
+        </span>
 
-        <div className="absolute z-[60] top-0 left-0 right-0 bottom-0 bg-[rgba(56,189,248,0.75)]"></div> */}
-
-        <nav className="absolute z-[70] top-0 left-0 right-0 bottom-0 text-white flex flex-col items-center justify-center font-semibold text-4xl">
+        <nav className="absolute z-[70] top-0 left-0 right-0 bottom-0 text-white flex flex-col items-center justify-center font-bold text-4xl">
           {links.map((link, i) => {
             return (
               <motion.div
@@ -76,16 +74,13 @@ const SideNav = forwardRef<HTMLDivElement, SideNavProps>(
                   type: "spring",
                   stiffness: 100,
                   duration: 0.3,
-                  //ease: "linear",
                   delay: i * 0.1,
                 }}
                 onClick={() => {
                   closeSideNav();
-                  setIsSideNavOpen(false);
-                  setActive(false);
                 }}
               >
-                <Link href={link.href}>{link.name}</Link>
+                <Link href={link.href}>{link.name.toUpperCase()}</Link>
               </motion.div>
             );
           })}
