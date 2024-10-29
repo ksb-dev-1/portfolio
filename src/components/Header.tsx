@@ -43,11 +43,11 @@ export default function Header() {
         ref={headerRef}
         className="fixed z-30 top-0 left-0 right-0 h-20 flex justify-center backdrop-blur-2xl"
       >
-        <div className="max-w-6xl w-full flex items-center justify-between px-4 sm:px-8">
-          <div className="w-fit lg:max-w-[33.33%] lg:w-full">
+        <div className="max-w-6xl w-full flex items-center justify-between px-4 lg:px-8">
+          <div className="w-fit lg:max-w-[33.33%] lg:w-full lg:ml-2">
             <RevealAnimation>
               <motion.div
-                className="text-primary text-2xl font-extrabold ml-2"
+                className="text-primary text-2xl font-extrabold"
                 onClick={() => {
                   closeSideNav();
                   setIsSideNavOpen(false);
@@ -95,7 +95,7 @@ export default function Header() {
               target="_blank"
               aria-label="github-link"
             >
-              <FaGithub className="text-3xl mr-4 lg:mr-0 cursor-pointer hover:text-primary transition" />
+              <FaGithub className="text-3xl cursor-pointer hover:text-primary transition" />
             </motion.a>
             <motion.span
               initial={{ scale: 0 }}

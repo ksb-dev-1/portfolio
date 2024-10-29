@@ -2,7 +2,6 @@
 
 import Image from "next/image";
 import { motion, useScroll } from "framer-motion";
-import { ScrollParallax } from "react-just-parallax";
 
 //public
 //import HeroBG from "../../public/assets/hero-bg.svg";
@@ -11,7 +10,10 @@ import ProfileImage from "../../public/assets/profile-image-1.jpg";
 //components
 import DownloadCVButton from "@/components/DownloadCVButton";
 import RevealAnimation from "@/components/animations/RevealAnimation";
-import SkillsPage from "@/components/SkillsPage";
+import SkillsPageNew from "@/components/SkillsPageNew";
+import Projects from "@/components/Projects";
+import Contact from "@/components/Contact";
+// import Footer from "@/components/Footer";
 
 export default function Home() {
   const { scrollYProgress } = useScroll();
@@ -66,7 +68,7 @@ export default function Home() {
           </div>
 
           <motion.div
-            className="relative h-60 w-60 lg:h-80 lg:w-80 rounded-full lg:mb-32 ml-16 sm:ml-0"
+            className="relative h-60 w-60 lg:h-80 lg:w-80 rounded-full lg:mb-32 ml-6 sm:ml-0"
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{
@@ -74,39 +76,41 @@ export default function Home() {
               ease: "linear",
             }}
           >
-            <div className="absolute top-[20%] right-8 rounded-full h-60 w-60 lg:h-72 lg:w-72 border-2 border-primary">
-              <div className="absolute top-12 -right-8 rounded-full h-20 w-20 lg:h-24 lg:w-24 border-2 border-white"></div>
-              <div className="absolute top-36 -left-8 rounded-full h-32 w-32 lg:h-36 lg:w-36 border-2 border-white"></div>
-              <ScrollParallax>
-                <div className="-right-0 -top-12 absolute h-48 w-48 lg:h-56 lg:w-56 bg-[rgba(56,189,248,0.25)] rounded-full">
-                  <div className="absolute h-44 w-44 lg:h-52 lg:w-52 bg-[rgba(56,189,248,0.4)] rounded-full top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                    <motion.div
-                      className="absolute top-2 left-2 h-40 w-40 lg:h-48 lg:w-48 rounded-full bg-slate-200"
-                      animate={{ rotate: [0, 360] }}
-                      transition={{
-                        type: "spring",
-                        stiffness: 100,
-                        duration: 0.3,
-                      }}
-                    >
-                      <Image
-                        src={ProfileImage}
-                        alt="profile image"
-                        fill
-                        priority
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                        className="object-contain rounded-full"
-                      />
-                    </motion.div>
-                  </div>
-                </div>
-              </ScrollParallax>
+            <div className="absolute top-[20%] right-0 h-60 w-60 lg:h-72 lg:w-72 border-2 border-primary">
+              {/* <div className="absolute top-12 -right-8 h-20 w-20 lg:h-24 lg:w-24 border-2 border-white"></div> */}
+              <div className="absolute top-24 lg:top-28 -left-8 h-28 w-36 lg:h-36 lg:w-44 border-2 border-white"></div>
+              {/* <MouseParallax> */}
+              {/* <div className="-right-0 -top-12 absolute h-48 w-48 lg:h-56 lg:w-56 bg-[rgba(56,189,248,0.25)]">
+                <div className="absolute h-44 w-44 lg:h-52 lg:w-52 bg-[rgba(56,189,248,0.4)] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"> */}
+              <motion.div
+                className="absolute right-12 -top-12 h-48 w-40 lg:h-56 lg:w-48 bg-slate-200 border-8 border-secondary"
+                animate={{ rotate: [0, 360] }}
+                transition={{
+                  type: "spring",
+                  stiffness: 100,
+                  duration: 0.3,
+                }}
+              >
+                <Image
+                  src={ProfileImage}
+                  alt="profile image"
+                  fill
+                  priority
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="object-cover"
+                />
+              </motion.div>
+              {/* </div>
+              </div> */}
+              {/* </MouseParallax> */}
             </div>
           </motion.div>
         </div>
       </div>
-      <SkillsPage />
-      <div className="h-screen w-screen bg-secondary"></div>
+      <SkillsPageNew />
+      <Projects />
+      <Contact />
+      {/* <Footer /> */}
     </>
   );
 }
