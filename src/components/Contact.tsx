@@ -1,14 +1,16 @@
 import { IoMailOutline } from "react-icons/io5";
 import { BsTelephone } from "react-icons/bs";
 import { IoLocationOutline } from "react-icons/io5";
+import FuzzyOverlay from "./FuzzyOverlay";
 
 const Contact = () => {
   return (
     <section
       id="contact"
       aria-label="Contact Information"
-      className="w-screen flex justify-center bg-primary text-secondary py-8"
+      className="relative w-screen flex justify-center bg-tertiary py-8 overflow-hidden"
     >
+      <FuzzyOverlay />
       <div className="max-w-6xl w-full flex flex-col items-center justify-center px-4 lg:px-8">
         <h1 className="font-extrabold text-2xl sm:text-4xl mb-4">Contact</h1>
         <div className="flex items-center" aria-label="Contact email">

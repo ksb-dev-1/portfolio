@@ -4,7 +4,6 @@ import Image from "next/image";
 import { motion, useScroll } from "framer-motion";
 
 //public
-//import HeroBG from "../../public/assets/hero-bg.svg";
 import ProfileImage from "../../public/assets/profile-image-1.jpg";
 
 //components
@@ -13,7 +12,8 @@ import RevealAnimation from "@/components/animations/RevealAnimation";
 import SkillsPageNew from "@/components/SkillsPageNew";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
-// import Footer from "@/components/Footer";
+
+import { ScrollParallax } from "react-just-parallax";
 
 export default function Home() {
   const { scrollYProgress } = useScroll();
@@ -25,15 +25,8 @@ export default function Home() {
       />
       <div
         id="home"
-        className="relative min-h-screen w-screen flex flex-col items-center justify-center overflow-x-hidden lg:overflow-hidden pt-36 pb-16 lg:py:0"
+        className="relative min-h-screen w-screen flex flex-col items-center justify-center overflow-x-hidden lg:overflow-hidden pt-36 pb-16 border-b-2 border-tertiary lg:py:0 bg-secondary"
       >
-        {/* <Image
-          src={HeroBG}
-          alt="Hero"
-          fill
-          className="object-cover"
-          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
-        /> */}
         <div className="max-w-6xl w-full h-full flex flex-col-reverse lg:flex-row items-center justify-between px-4 lg:px-8">
           <div className="sm:max-w-2xl h-full lg:h-auto mt-32 lg:mt-0 flex flex-col items-center justify-center lg:block">
             <RevealAnimation>
@@ -82,24 +75,28 @@ export default function Home() {
               {/* <MouseParallax> */}
               {/* <div className="-right-0 -top-12 absolute h-48 w-48 lg:h-56 lg:w-56 bg-[rgba(56,189,248,0.25)]">
                 <div className="absolute h-44 w-44 lg:h-52 lg:w-52 bg-[rgba(56,189,248,0.4)] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"> */}
-              <motion.div
-                className="absolute right-12 -top-12 h-48 w-40 lg:h-56 lg:w-48 bg-slate-200 border-8 border-secondary"
-                animate={{ rotate: [0, 360] }}
-                transition={{
-                  type: "spring",
-                  stiffness: 100,
-                  duration: 0.3,
-                }}
-              >
-                <Image
-                  src={ProfileImage}
-                  alt="profile image"
-                  fill
-                  priority
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  className="object-cover"
-                />
-              </motion.div>
+              <ScrollParallax>
+                <motion.div
+                  className="absolute right-12 -top-12 h-48 w-40 lg:h-56 lg:w-48 bg-slate-200 border-8 border-secondary"
+                  initial={{ opacity: 0, scale: 0 }}
+                  animate={{ opacity: 1, scale: 1, rotate: [180, 360] }}
+                  transition={{
+                    type: "spring",
+                    stiffness: 100,
+                    duration: 0.3,
+                    delay: 0.3,
+                  }}
+                >
+                  <Image
+                    src={ProfileImage}
+                    alt="profile image"
+                    fill
+                    priority
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    className="object-cover"
+                  />
+                </motion.div>
+              </ScrollParallax>
               {/* </div>
               </div> */}
               {/* </MouseParallax> */}
@@ -110,7 +107,6 @@ export default function Home() {
       <SkillsPageNew />
       <Projects />
       <Contact />
-      {/* <Footer /> */}
     </>
   );
 }
