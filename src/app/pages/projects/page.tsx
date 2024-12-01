@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 
 import { useState, useRef } from "react";
@@ -7,11 +8,8 @@ import Link from "next/link";
 import ParticlesBackground from "@/components/animations/ParticlesBackground";
 import PageTransition from "@/components/animations/PageTransition";
 import Carousel from "@/components/Carousel";
-// import FuzzyOverlay from "@/components/FuzzyOverlay";
 
 import { FaGithub, FaGlobeAmericas } from "react-icons/fa";
-// import { IoMdImages } from "react-icons/io";
-// import { IoPlayCircleOutline } from "react-icons/io5";
 
 const ProjectsPage = () => {
   const [isCarouselOpen, setIsCarouselOpen] = useState<boolean>(false);
@@ -29,130 +27,143 @@ const ProjectsPage = () => {
             <h1 className="font-bold text-xl mb-4 sm:mb-8 uppercase">
               Projects
             </h1>
-            <div className="flex flex-col border border-tertiary rounded-xl p-4 sm:p-8">
-              <div className="flex flex-col">
-                <h1 className="font-bold bg-primary text-secondary px-4 py-2 rounded-xl w-fit">
+            <div className="grid grid-cols-1 gap-4">
+              <div className="flex flex-col border border-tertiary rounded-xl">
+                <h1 className="font-bold text-xl bg-tertiary text-white p-4 rounded-tr-xl rounded-tl-xl">
                   Codify
                 </h1>
-                <div className="mt-4 flex items-center">
-                  <Link
-                    href="#"
-                    className="flex items-center hover:text-primary"
-                  >
-                    <FaGithub />
-                    <span className="ml-2">GitHub</span>
-                  </Link>
-                  <Link
-                    href="#"
-                    className="flex items-center hover:text-primary ml-8"
-                  >
-                    <FaGlobeAmericas />
-                    <span className="ml-2">Live Demo</span>
-                  </Link>
+                <div className="p-4 sm:p-8">
+                  <p>
+                    Codify is your go-to platform for mastering JavaScript. We
+                    make learning interactive and enjoyable, turning coding into
+                    a fun and rewarding experience.
+                  </p>
+
+                  <div className="mt-8">
+                    <span className="px-4 py-2 rounded-[50px] border border-tertiary mr-2 mb-2 sm:mb-4 inline-block">
+                      Next.js
+                    </span>
+                    <span className="px-4 py-2 rounded-[50px] border border-tertiary mr-2 mb-2 sm:mb-4 inline-block">
+                      Typescript
+                    </span>
+                    <span className="px-4 py-2 rounded-[50px] border border-tertiary mr-2 mb-2 sm:mb-4 inline-block">
+                      MongoDB
+                    </span>
+                    <span className="cursor-pointer text-primary">more...</span>
+                  </div>
+                  <div className="mt-4 flex items-center">
+                    <Link
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center hover:text-primary"
+                    >
+                      <FaGithub />
+                      <span className="mx-2">GitHub</span>
+                    </Link>
+                    <Link
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center hover:text-primary ml-8"
+                    >
+                      <FaGlobeAmericas />
+                      <span className="ml-2">Live Demo</span>
+                    </Link>
+                  </div>
                 </div>
               </div>
-              <p className="font-bold mt-8 mb-4 bg-tertiary text-white px-4 py-2 rounded-xl w-fit capitalize">
-                Technologies used
-              </p>
-              <div>
-                <span className="px-2 py-1 sm:px-4 sm:py-2 text-sm sm:text-base rounded-xl border border-tertiary mr-2 sm:mr-4 mb-2 sm:mb-4 inline-block">
-                  Next.js
-                </span>
-                <span className="px-2 py-1 sm:px-4 sm:py-2 text-sm sm:text-base rounded-xl border border-tertiary mr-2 sm:mr-4 mb-2 sm:mb-4 inline-block">
-                  Typescript
-                </span>
-                <span className="px-2 py-1 sm:px-4 sm:py-2 text-sm sm:text-base rounded-xl border border-tertiary mr-2 sm:mr-4 mb-2 sm:mb-4 inline-block">
-                  MongoDB
-                </span>
-                <span className="px-2 py-1 sm:px-4 sm:py-2 text-sm sm:text-base rounded-xl border border-tertiary mr-2 sm:mr-4 mb-2 sm:mb-4 inline-block">
-                  Tanstack Query
-                </span>
-                <span className="px-2 py-1 sm:px-4 sm:py-2 text-sm sm:text-base rounded-xl border border-tertiary mr-2 sm:mr-4 mb-2 sm:mb-4 inline-block">
-                  Tailwind
-                </span>
-                <span className="px-2 py-1 sm:px-4 sm:py-2 text-sm sm:text-base rounded-xl border border-tertiary mr-2 sm:mr-4 mb-2 sm:mb-4 inline-block">
-                  Prisma
-                </span>
-                <span className="px-2 py-1 sm:px-4 sm:py-2 text-sm sm:text-base rounded-xl border border-tertiary mr-2 sm:mr-4 mb-2 sm:mb-4 inline-block">
-                  Auth.js
-                </span>
-                <span className="px-2 py-1 sm:px-4 sm:py-2 text-sm sm:text-base rounded-xl border border-tertiary mr-2 sm:mr-4 mb-2 sm:mb-4 inline-block">
-                  Stripe
-                </span>
-                <span className="px-2 py-1 sm:px-4 sm:py-2 text-sm sm:text-base rounded-xl border border-tertiary mr-2 sm:mr-4 mb-2 sm:mb-4 inline-block">
-                  Shadcn UI
-                </span>
-                <span className="px-2 py-1 sm:px-4 sm:py-2 text-sm sm:text-base rounded-xl border border-tertiary mr-2 sm:mr-4 mb-2 sm:mb-4 inline-block">
-                  React Hook Form
-                </span>
-                <span className="px-2 py-1 sm:px-4 sm:py-2 text-sm sm:text-base rounded-xl border border-tertiary mr-2 sm:mr-4 mb-2 sm:mb-4 inline-block">
-                  Zod
-                </span>
-                <span className="px-2 py-1 sm:px-4 sm:py-2 text-sm sm:text-base rounded-xl border border-tertiary mr-2 sm:mr-4 mb-2 sm:mb-4 inline-block">
-                  React Hot Toast
-                </span>
-              </div>
-            </div>
 
-            <div className="flex flex-col border border-tertiary rounded-xl p-4 sm:p-8 mt-8">
-              <div className="flex flex-col">
-                <h1 className="font-bold bg-primary text-secondary px-4 py-2 rounded-xl w-fit">
+              <div className="flex flex-col border border-tertiary rounded-xl">
+                <h1 className="font-bold text-xl bg-tertiary text-white p-4 rounded-tr-xl rounded-tl-xl">
                   Jooble
                 </h1>
-                <div className="mt-4 flex items-center">
-                  <Link
-                    href="#"
-                    className="flex items-center hover:text-primary"
-                  >
-                    <FaGithub />
-                    <span className="ml-2">GitHub</span>
-                  </Link>
-                  <Link
-                    href="#"
-                    className="flex items-center hover:text-primary ml-8"
-                  >
-                    <FaGlobeAmericas />
-                    <span className="ml-2">Live Demo</span>
-                  </Link>
+                <div className="p-4 sm:p-8">
+                  <p>
+                    Codify is your go-to platform for mastering JavaScript. We
+                    make learning interactive and enjoyable, turning coding into
+                    a fun and rewarding experience.
+                  </p>
+
+                  <div className="mt-8">
+                    <span className="px-4 py-2 rounded-[50px] border border-tertiary mr-2 mb-2 sm:mb-4 inline-block">
+                      Next.js
+                    </span>
+                    <span className="px-4 py-2 rounded-[50px] border border-tertiary mr-2 mb-2 sm:mb-4 inline-block">
+                      Typescript
+                    </span>
+                    <span className="px-4 py-2 rounded-[50px] border border-tertiary mr-2 mb-2 sm:mb-4 inline-block">
+                      MongoDB
+                    </span>
+                    <span className="cursor-pointer text-primary">more...</span>
+                  </div>
+                  <div className="mt-4 flex items-center">
+                    <Link
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center hover:text-primary"
+                    >
+                      <FaGithub />
+                      <span className="mx-2">GitHub</span>
+                    </Link>
+                    <Link
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center hover:text-primary ml-8"
+                    >
+                      <FaGlobeAmericas />
+                      <span className="ml-2">Live Demo</span>
+                    </Link>
+                  </div>
                 </div>
               </div>
-              <p className="font-bold mt-8 mb-4 bg-tertiary text-white px-4 py-2 rounded-xl w-fit capitalize">
-                Technologies used
-              </p>
-              <div>
-                <span className="px-2 py-1 sm:px-4 sm:py-2 text-sm sm:text-base rounded-xl border border-tertiary mr-2 sm:mr-4 mb-2 sm:mb-4 inline-block">
-                  Next.js
-                </span>
-                <span className="px-2 py-1 sm:px-4 sm:py-2 text-sm sm:text-base rounded-xl border border-tertiary mr-2 sm:mr-4 mb-2 sm:mb-4 inline-block">
-                  Typescript
-                </span>
-                <span className="px-2 py-1 sm:px-4 sm:py-2 text-sm sm:text-base rounded-xl border border-tertiary mr-2 sm:mr-4 mb-2 sm:mb-4 inline-block">
-                  PostgreSQL
-                </span>
-                <span className="px-2 py-1 sm:px-4 sm:py-2 text-sm sm:text-base rounded-xl border border-tertiary mr-2 sm:mr-4 mb-2 sm:mb-4 inline-block">
-                  Tailwind
-                </span>
-                <span className="px-2 py-1 sm:px-4 sm:py-2 text-sm sm:text-base rounded-xl border border-tertiary mr-2 sm:mr-4 mb-2 sm:mb-4 inline-block">
-                  Prisma
-                </span>
-                <span className="px-2 py-1 sm:px-4 sm:py-2 text-sm sm:text-base rounded-xl border border-tertiary mr-2 sm:mr-4 mb-2 sm:mb-4 inline-block">
-                  Auth.js
-                </span>
-                <span className="px-2 py-1 sm:px-4 sm:py-2 text-sm sm:text-base rounded-xl border border-tertiary mr-2 sm:mr-4 mb-2 sm:mb-4 inline-block">
-                  Stripe
-                </span>
-                <span className="px-2 py-1 sm:px-4 sm:py-2 text-sm sm:text-base rounded-xl border border-tertiary mr-2 sm:mr-4 mb-2 sm:mb-4 inline-block">
-                  Shadcn UI
-                </span>
-                <span className="px-2 py-1 sm:px-4 sm:py-2 text-sm sm:text-base rounded-xl border border-tertiary mr-2 sm:mr-4 mb-2 sm:mb-4 inline-block">
-                  React Hook Form
-                </span>
-                <span className="px-2 py-1 sm:px-4 sm:py-2 text-sm sm:text-base rounded-xl border border-tertiary mr-2 sm:mr-4 mb-2 sm:mb-4 inline-block">
-                  Zod
-                </span>
-                <span className="px-2 py-1 sm:px-4 sm:py-2 text-sm sm:text-base rounded-xl border border-tertiary mr-2 sm:mr-4 mb-2 sm:mb-4 inline-block">
-                  React Hot Toast
-                </span>
+
+              <div className="flex flex-col border border-tertiary rounded-xl">
+                <h1 className="font-bold text-xl bg-tertiary text-white p-4 rounded-tr-xl rounded-tl-xl">
+                  MERN Auth
+                </h1>
+                <div className="p-4 sm:p-8">
+                  <p>
+                    Codify is your go-to platform for mastering JavaScript. We
+                    make learning interactive and enjoyable, turning coding into
+                    a fun and rewarding experience.
+                  </p>
+
+                  <div className="mt-8">
+                    <span className="px-4 py-2 rounded-[50px] border border-tertiary mr-2 mb-2 sm:mb-4 inline-block">
+                      Next.js
+                    </span>
+                    <span className="px-4 py-2 rounded-[50px] border border-tertiary mr-2 mb-2 sm:mb-4 inline-block">
+                      Typescript
+                    </span>
+                    <span className="px-4 py-2 rounded-[50px] border border-tertiary mr-2 mb-2 sm:mb-4 inline-block">
+                      MongoDB
+                    </span>
+                    <span className="cursor-pointer text-primary">more...</span>
+                  </div>
+                  <div className="mt-4 flex items-center">
+                    <Link
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center hover:text-primary"
+                    >
+                      <FaGithub />
+                      <span className="mx-2">GitHub</span>
+                    </Link>
+                    <Link
+                      href="#"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center hover:text-primary ml-8"
+                    >
+                      <FaGlobeAmericas />
+                      <span className="ml-2">Live Demo</span>
+                    </Link>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

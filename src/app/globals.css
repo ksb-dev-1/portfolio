@@ -60,3 +60,8 @@ html {
   border-radius: 50%;
   transform: rotate(0deg);
 }
+
+.custom-img {
+  max-width: none;
+  height: 100px; /* Match the width for a perfect circle */
+}
