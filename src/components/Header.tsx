@@ -11,9 +11,9 @@ import { FaGithub } from "react-icons/fa";
 import { IoMdMenu } from "react-icons/io";
 
 const links = [
-  { name: "Skills", href: "/pages/skills" },
-  { name: "Projects", href: "/pages/projects" },
-  { name: "Contact", href: "/pages/contact" },
+  { name: "Skills", href: "#skills" },
+  { name: "Projects", href: "#projects" },
+  { name: "Contact", href: "#contact" },
 ];
 
 export default function Header() {
@@ -53,7 +53,7 @@ export default function Header() {
                   setIsSideNavOpen(false);
                 }}
               >
-                <FlipAnimation href="/">{title}</FlipAnimation>
+                <FlipAnimation href="#home">{title}</FlipAnimation>
               </motion.div>
             </RevealAnimation>
           </div>
