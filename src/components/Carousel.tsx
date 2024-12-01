@@ -32,7 +32,7 @@ const Carousel = forwardRef<HTMLDivElement, CarouselProps>(
     return (
       <div
         ref={ref}
-        className={`fixed top-0 left-0 right-0 bottom-0 backdrop-blur-2xl flex items-center justify-center ${
+        className={`fixed top-0 left-0 right-0 bottom-0 z-10 backdrop-blur-2xl flex items-center justify-center ${
           isCarouselOpen ? "opacity-1 z-[40]" : "opacity-0 z-[-10]"
         } transition duration-500`}
       >
@@ -40,7 +40,7 @@ const Carousel = forwardRef<HTMLDivElement, CarouselProps>(
           className="text-white absolute top-6 right-4 z-[80] cursor-pointer"
           onClick={handleCloseCarousel}
         >
-          <IoMdClose className="text-4xl" />
+          <IoMdClose className="text-4xl hover:text-primary" />
         </span>
         <div className="relative h-[calc(100vh-20vh)] max-w-5xl w-full rounded-xl overflow-hidden">
           <Images swiperRef={swiperRef} />

@@ -1,10 +1,9 @@
 "use client";
 
 import { useState, useRef } from "react";
-import Image from "next/image";
 
-import HeroBG from "../../../../public/assets/hero-bg.svg";
-
+// components
+import ParticlesBackground from "@/components/animations/ParticlesBackground";
 import PageTransition from "@/components/animations/PageTransition";
 import Carousel from "@/components/Carousel";
 import FuzzyOverlay from "@/components/FuzzyOverlay";
@@ -23,15 +22,10 @@ const ProjectsPage = () => {
   return (
     <>
       <PageTransition>
-        <div className="relative min-h-screen w-screen flex flex-col items-center justify-center bg-secondary pt-[calc(80px+10rem)] pb-[2rem] sm:pt-0 sm:pb-0">
-          <Image
-            src={HeroBG}
-            alt="Hero"
-            fill
-            className="absolute object-cover"
-          />
-          <div className="absolute z-10 max-w-6xl w-full flex flex-col px-4">
-            {/* <h1 className="font-extrabold text-2xl mb-8 uppercase">ProjectsPage</h1> */}
+        <div className="relative h-fit w-screen flex justify-center bg-secondary pt-[calc(79.2px+2rem)] pb-[2rem] sm:pt-[calc(79.2px+4rem)] sm:pb-[4rem]">
+          <ParticlesBackground count={100} />
+          <div className="relative max-w-6xl w-full flex flex-col px-4">
+            <h1 className="font-bold text-xl mb-4">Projects</h1>
             <div className="grid grid-clos-1 md:grid-cols-2 w-full gap-8">
               <div className="p-8 bg-tertiary rounded-xl">
                 <div className="flex items-center justify-between mb-4">

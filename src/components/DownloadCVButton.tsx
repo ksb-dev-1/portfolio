@@ -23,7 +23,7 @@ const DownloadCVButton = () => {
     <div className="mt-6">
       <RevealAnimation>
         <motion.button
-          className="relative h-[56px] w-[166px] font-bold"
+          className="relative h-[56px] w-[166px] font-bold rounded-[50px] overflow-hidden"
           transition={{ duration: 0.3, ease: "linear" }}
           initial="initial"
           whileHover="hovered"

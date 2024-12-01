@@ -41,7 +41,7 @@ export default function Header() {
     <>
       <div
         ref={headerRef}
-        className="fixed z-30 top-0 left-0 right-0 h-20 flex justify-center backdrop-blur-2xl"
+        className="fixed z-30 top-0 left-0 right-0 h-20 flex justify-center backdrop-blur-2xl border-b border-tertiary"
       >
         <div className="max-w-6xl w-full flex items-center justify-between px-4">
           <div className="w-fit lg:max-w-[33.33%] lg:w-full lg:ml-2">

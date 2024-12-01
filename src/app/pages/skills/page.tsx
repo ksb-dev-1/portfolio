@@ -2,8 +2,12 @@
 
 import { useEffect, useState } from "react";
 import Image from "next/image";
-import HeroBG from "../../../../public/assets/hero-bg.svg";
+
+// components
+import ParticlesBackground from "@/components/animations/ParticlesBackground";
 import PageTransition from "@/components/animations/PageTransition";
+
+// 3rd party
 import { motion } from "framer-motion";
 
 interface Icon {
@@ -104,28 +108,29 @@ const SkillsPage = () => {
 
   return (
     <PageTransition>
-      <div className="relative min-h-screen w-screen flex items-center justify-center bg-secondary pt-[calc(80px+10rem)] pb-[2rem] sm:pt-0 sm:pb-0">
-        <Image src={HeroBG} alt="Hero" fill className="absolute object-cover" />
-        <div className="absolute z-10 max-w-6xl w-full flex flex-col px-4">
+      <div className="relative w-screen flex items-center justify-center bg-secondary pt-[calc(79.2px+2rem)] pb-[2rem] sm:pt-[calc(79.2px+4rem)] sm:pb-[4rem]">
+        <ParticlesBackground count={100} />
+        <div className="relative max-w-6xl w-full flex flex-col px-4">
+          <h1 className="font-bold text-xl mb-4">Skills</h1>
           <div className="grid grid-cols-3 md:grid-cols-5 gap-4">
             {iconsArray.map(({ icon, name, href }, i) => (
               <div
                 key={name}
-                className="relative w-full h-32 md:h-40 overflow-hidden border-2 border-tertiary"
+                className="relative w-full h-32 md:h-40 rounded-xl overflow-hidden border-2 border-tertiary"
               >
                 <Image
                   src={icon}
                   alt={name}
                   fill
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  className="object-cover"
+                  className="object-contain rounded-xl"
                 />
                 <motion.a
                   className={`absolute top-0 left-0 right-0 bottom-0 ${
                     activeIndex === i
                       ? "bg-[rgb(11,17,32,0.8)]"
                       : "bg-[rgb(11,17,32,1)]"
-                  } hover:bg-[rgb(11,17,32,0.8)] w-full h-32 md:h-40 flex flex-col items-center justify-center transition duration-500`}
+                  } hover:bg-tertiary w-full h-32 md:h-40 rounded-xl flex flex-col items-center justify-center transition duration-500`}
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
