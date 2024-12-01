@@ -54,7 +54,7 @@ const ParticlesBackground = ({ count = 50 }: { count: number }) => {
   }, [count]);
 
   return (
-    <div className="absolute w-screen h-screen overflow-hidden">
+    <div className="absolute w-screen min-h-screen h-full overflow-hidden">
       {particles.map((particle, i) => (
         <motion.div
           key={particle.id}
@@ -73,7 +73,7 @@ const ParticlesBackground = ({ count = 50 }: { count: number }) => {
             opacity: [0, 0.5, 1, 0],
           }}
           transition={{
-            duration: 5,
+            duration: 20,
             repeat: Infinity,
             delay: particle.delay,
           }}
@@ -83,7 +83,7 @@ const ParticlesBackground = ({ count = 50 }: { count: number }) => {
             height: particle.size,
             borderRadius: "50%",
             backgroundColor: `${
-              i % 3 === 0 ? "#00bfff" : "rgba(255, 255, 255, 0.7)"
+              i % 3 === 0 ? "#1DA1F2" : "rgba(255, 255, 255, 0.7)"
             }`,
           }}
         />

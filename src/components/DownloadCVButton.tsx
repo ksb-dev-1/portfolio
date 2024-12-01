@@ -29,7 +29,7 @@ const DownloadCVButton = () => {
           whileHover="hovered"
         >
           <motion.div
-            className="absolute top-0 left-[-166px] flex items-center h-[56px] w-[332px] text-secondary"
+            className="absolute top-0 left-[-166px] flex items-center h-[56px] w-[332px]"
             variants={{
               initial: {
                 x: 0,
@@ -40,10 +40,10 @@ const DownloadCVButton = () => {
             }}
             transition={{ duration: 0.15, ease: "linear" }}
           >
-            <div className="h-[56px] w-[166px] flex flex-col items-center justify-center bg-white">
+            <div className="h-[56px] w-[166px] flex flex-col items-center justify-center bg-white text-secondary">
               Download CV
             </div>
-            <div className="h-[56px] w-[166px] flex flex-col items-center justify-center bg-primary">
+            <div className="h-[56px] w-[166px] flex flex-col items-center justify-center bg-primary text-white">
               Download CV
             </div>
           </motion.div>

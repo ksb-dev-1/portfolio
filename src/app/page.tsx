@@ -3,27 +3,25 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 
-//public
-import ProfileImage from "../../public/assets/profile-image-1.jpg";
-
 //components
 import DownloadCVButton from "@/components/DownloadCVButton";
 import RevealAnimation from "@/components/animations/RevealAnimation";
-import { MouseParallax } from "react-just-parallax";
 import ParticlesBackground from "@/components/animations/ParticlesBackground";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
 import Contact from "@/components/Contact";
+
+import { MouseParallax } from "react-just-parallax";
 
 export default function Home() {
   return (
     <>
       <div
         id="home"
-        className="relative w-screen flex items-center justify-center bg-secondary"
+        className="relative w-screen flex items-center justify-center bg-[#0A0A0A]"
       >
         <ParticlesBackground count={100} />
-        <div className="relative max-w-6xl w-full h-full flex flex-col-reverse lg:flex-row items-center justify-between px-4 border-b border-tertiary pt-[calc(79.2px+2rem)] pb-[2rem] sm:pt-[calc(79.2px+4rem)] sm:pb-[4rem]">
+        <div className="relative max-w-6xl w-full h-full flex flex-col-reverse lg:flex-row items-center justify-between px-4 pt-[calc(79.2px+2rem)] pb-[2rem] sm:pt-[calc(79.2px+4rem)] sm:pb-[4rem]">
           <div className="sm:max-w-2xl h-full lg:h-auto mt-32 lg:mt-0 flex flex-col items-center justify-center lg:block">
             <RevealAnimation>
               <p className="text-3xl sm:text-4xl font-extrabold pb-4">
@@ -91,7 +89,7 @@ export default function Home() {
                   }}
                 >
                   <Image
-                    src={ProfileImage}
+                    src="/assets/profile-image-1.jpg"
                     alt="profile image"
                     fill
                     priority

@@ -3,11 +3,9 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 
-// components
-import ParticlesBackground from "@/components/animations/ParticlesBackground";
-
 // 3rd party
 import { motion } from "framer-motion";
+import { ScrollParallax } from "react-just-parallax";
 
 interface Icon {
   icon: string;
@@ -96,6 +94,8 @@ const iconsArray: Icon[] = [
 const Skills = () => {
   const [activeIndex, setActiveIndex] = useState(-1); // Initially, no box is active
 
+  console.log(activeIndex);
+
   useEffect(() => {
     const interval = setInterval(() => {
       const randomIndex = Math.floor(Math.random() * iconsArray.length);
@@ -110,14 +110,14 @@ const Skills = () => {
       id="skills"
       className="relative w-screen flex items-center justify-center bg-secondary"
     >
-      <ParticlesBackground count={100} />
-      <div className="relative max-w-6xl w-full flex flex-col px-4 py-[2rem] sm:py-[4rem] border-b border-tertiary">
-        <h1 className="font-bold text-xl mb-4 sm:mb-8 uppercase">Skills</h1>
-        <div className="grid grid-cols-3 md:grid-cols-5 gap-4">
+      {/* <ParticlesBackground count={100} /> */}
+      <div className="relative max-w-6xl w-full flex flex-col px-4 py-[2rem] sm:py-[4rem]">
+        <h1 className="font-bold text-xl mb-4 sm:mb-8">Skills</h1>
+        <div className="grid grid-cols-3 md:grid-cols-5">
           {iconsArray.map(({ icon, name, href }, i) => (
             <div
               key={name}
-              className="relative w-full h-32 md:h-40 rounded-xl overflow-hidden border-2 border-tertiary"
+              className="relative w-full h-32 md:h-40 overflow-hidden"
             >
               <Image
                 src={icon}
@@ -127,19 +127,40 @@ const Skills = () => {
                 className="object-contain rounded-xl"
               />
               <motion.a
-                className={`absolute top-0 left-0 right-0 bottom-0 ${
-                  activeIndex === i
-                    ? "bg-[rgb(11,17,32,0.8)]"
-                    : "bg-[rgb(11,17,32,1)]"
-                } hover:bg-tertiary w-full h-32 md:h-40 rounded-xl flex flex-col items-center justify-center transition duration-500`}
+                className={`absolute top-0 left-0 right-0 bottom-0 w-full h-32 md:h-40 flex flex-col items-center justify-center transition duration-500
+                    ${
+                      i % 2 !== 0
+                        ? "bg-[rgba(23,23,23,1)] hover:bg-[rgba(23,23,23,0.8)]"
+                        : ""
+                    }
+                    ${
+                      i % 2 === 0
+                        ? "bg-[rgba(68,68,68,1)] hover:bg-[rgba(68,68,68,0.8)]"
+                        : ""
+                    }
+                `}
                 href={href}
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                <Image src={icon} alt={name} height={50} width={50} />
-                <span className="inline-block mt-2 text-xs md:text-base">
-                  {name}
-                </span>
+                {/* {activeIndex !== i && (
+                  <div className="relative">
+                    <MouseParallax>
+                      <Image src={icon} alt={name} height={50} width={50} />
+                      <span className="inline-block mt-2 text-xs md:text-base">
+                        {name}
+                      </span>
+                    </MouseParallax>
+                  </div>
+                )} */}
+                <div className="relative">
+                  <ScrollParallax>
+                    <Image src={icon} alt={name} height={50} width={50} />
+                    <span className="inline-block mt-2 text-xs md:text-base">
+                      {name}
+                    </span>
+                  </ScrollParallax>
+                </div>
               </motion.a>
             </div>
           ))}
