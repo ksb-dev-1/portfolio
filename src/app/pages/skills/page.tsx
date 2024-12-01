@@ -111,7 +111,7 @@ const SkillsPage = () => {
       <div className="relative w-screen flex items-center justify-center bg-secondary pt-[calc(79.2px+2rem)] pb-[2rem] sm:pt-[calc(79.2px+4rem)] sm:pb-[4rem]">
         <ParticlesBackground count={100} />
         <div className="relative max-w-6xl w-full flex flex-col px-4">
-          <h1 className="font-bold text-xl mb-4">Skills</h1>
+          <h1 className="font-bold text-xl mb-4 sm:mb-8 uppercase">Skills</h1>
           <div className="grid grid-cols-3 md:grid-cols-5 gap-4">
             {iconsArray.map(({ icon, name, href }, i) => (
               <div

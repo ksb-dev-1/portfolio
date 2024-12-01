@@ -83,7 +83,7 @@ const ParticlesBackground = ({ count = 50 }: { count: number }) => {
             height: particle.size,
             borderRadius: "50%",
             backgroundColor: `${
-              i % 3 === 0 ? "#38BDF8" : "rgba(255, 255, 255, 0.7)"
+              i % 3 === 0 ? "#00bfff" : "rgba(255, 255, 255, 0.7)"
             }`,
           }}
         />

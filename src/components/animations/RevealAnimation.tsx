@@ -39,7 +39,7 @@ export default function RevealAnimation({ children }: Props) {
         // animate={mainControls}
         initial={{ opacity: 0, y: "100%" }}
         animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.3, ease: "linear" }}
+        transition={{ duration: 0.5, ease: "linear" }}
       >
         {children}
       </motion.div>
@@ -54,7 +54,7 @@ export default function RevealAnimation({ children }: Props) {
         // transition={{ duration: 1, ease: "anticipate" }}
         initial={{ left: 0 }}
         animate={{ left: "100%" }}
-        transition={{ duration: 0.3, ease: "linear" }}
+        transition={{ duration: 0.5, ease: "linear" }}
         className="absolute top-0 left-0 right-0 bottom-0 bg-primary
          z-20"
       />
