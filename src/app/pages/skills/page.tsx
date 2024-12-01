@@ -6,7 +6,13 @@ import HeroBG from "../../../../public/assets/hero-bg.svg";
 import PageTransition from "@/components/animations/PageTransition";
 import { motion } from "framer-motion";
 
-export const iconsArray = [
+interface Icon {
+  icon: string;
+  name: string;
+  href: string;
+}
+
+const iconsArray: Icon[] = [
   {
     icon: "/assets/svg/html.svg",
     name: "HTML",
@@ -84,7 +90,7 @@ export const iconsArray = [
   },
 ];
 
-export default function Skills() {
+const SkillsPage = () => {
   const [activeIndex, setActiveIndex] = useState(-1); // Initially, no box is active
 
   useEffect(() => {
@@ -136,4 +142,6 @@ export default function Skills() {
       </div>
     </PageTransition>
   );
-}
+};
+
+export default SkillsPage;

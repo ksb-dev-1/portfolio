@@ -1,6 +1,6 @@
 import PageTransition from "@/components/animations/PageTransition";
 
-const About = () => {
+const AboutPage = () => {
   return (
     <PageTransition>
       <div className="absolute top-0 left-0 right-0 bottom-0 z-10 flex flex-col items-center justify-center">
@@ -10,4 +10,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default AboutPage;

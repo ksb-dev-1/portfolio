@@ -13,7 +13,7 @@ import { FaGithub, FaGlobeAmericas } from "react-icons/fa";
 import { IoMdImages } from "react-icons/io";
 import { IoPlayCircleOutline } from "react-icons/io5";
 
-const Projects = () => {
+const ProjectsPage = () => {
   const [isCarouselOpen, setIsCarouselOpen] = useState<boolean>(false);
   const carouselRef = useRef<HTMLDivElement>(null);
 
@@ -31,7 +31,7 @@ const Projects = () => {
             className="absolute object-cover"
           />
           <div className="absolute z-10 max-w-6xl w-full flex flex-col px-4">
-            {/* <h1 className="font-extrabold text-2xl mb-8 uppercase">Projects</h1> */}
+            {/* <h1 className="font-extrabold text-2xl mb-8 uppercase">ProjectsPage</h1> */}
             <div className="grid grid-clos-1 md:grid-cols-2 w-full gap-8">
               <div className="p-8 bg-tertiary rounded-xl">
                 <div className="flex items-center justify-between mb-4">
@@ -92,4 +92,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default ProjectsPage;
