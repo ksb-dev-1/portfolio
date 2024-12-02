@@ -73,7 +73,7 @@ const ParticlesBackground = ({ count = 50 }: { count: number }) => {
             opacity: [0, 0.5, 1, 0],
           }}
           transition={{
-            duration: 20,
+            duration: 5,
             repeat: Infinity,
             delay: particle.delay,
           }}

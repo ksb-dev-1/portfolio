@@ -108,7 +108,7 @@ const Skills = () => {
   return (
     <div
       id="skills"
-      className="relative w-screen flex items-center justify-center bg-secondary"
+      className="relative min-h-screen w-screen flex items-center justify-center bg-secondary"
     >
       {/* <ParticlesBackground count={100} /> */}
       <div className="relative max-w-6xl w-full flex flex-col px-4 py-[2rem] sm:py-[4rem]">
