@@ -47,7 +47,7 @@ export default function Header() {
           <div className="w-fit lg:max-w-[33.33%] lg:w-full lg:ml-2">
             <RevealAnimation>
               <motion.div
-                className="text-primary text-xl font-extrabold"
+                className="text-primary text-2xl font-extrabold"
                 onClick={() => {
                   closeSideNav();
                   setIsSideNavOpen(false);

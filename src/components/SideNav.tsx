@@ -6,10 +6,10 @@ import { motion, useInView, useAnimation } from "framer-motion";
 import { IoMdClose } from "react-icons/io";
 
 const links = [
-  { name: "Home", href: "/" },
-  { name: "Skills", href: "/pages/skills" },
-  { name: "Projects", href: "/pages/projects" },
-  { name: "Contact", href: "/pages/contact" },
+  { name: "Home", href: "#home" },
+  { name: "Skills", href: "#skills" },
+  { name: "Projects", href: "#projects" },
+  { name: "Contact", href: "#contact" },
 ];
 
 interface SideNavProps {

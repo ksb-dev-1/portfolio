@@ -108,11 +108,11 @@ const Skills = () => {
   return (
     <div
       id="skills"
-      className="relative min-h-screen w-screen flex items-center justify-center bg-secondary"
+      className="relative w-screen flex items-center justify-center bg-secondary"
     >
       {/* <ParticlesBackground count={100} /> */}
       <div className="relative max-w-6xl w-full flex flex-col px-4 py-[2rem] sm:py-[4rem]">
-        <h1 className="font-bold text-xl mb-4 sm:mb-8">Skills</h1>
+        <h1 className="font-bold text-2xl mb-4 sm:mb-8 uppercase">Skills</h1>
         <div className="grid grid-cols-3 md:grid-cols-5">
           {iconsArray.map(({ icon, name, href }, i) => (
             <div

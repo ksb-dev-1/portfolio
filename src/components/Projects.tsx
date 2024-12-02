@@ -22,7 +22,9 @@ const Projects = () => {
         className="relative w-screen flex justify-center bg-[#0A0A0A] overflow-hidden"
       >
         <div className="relative max-w-6xl w-full flex flex-col px-4 py-[2rem] sm:py-[4rem]">
-          <h1 className="font-bold text-xl mb-4 sm:mb-8">Projects</h1>
+          <h1 className="font-bold text-2xl mb-4 sm:mb-8 uppercase">
+            Projects
+          </h1>
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-16">
             {/* Codify */}
             <div className="flex flex-col bg-secondary p-4 sm:p-8">
