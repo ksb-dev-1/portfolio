@@ -94,8 +94,6 @@ const iconsArray: Icon[] = [
 const Skills = () => {
   const [activeIndex, setActiveIndex] = useState(-1); // Initially, no box is active
 
-  console.log(activeIndex);
-
   useEffect(() => {
     const interval = setInterval(() => {
       const randomIndex = Math.floor(Math.random() * iconsArray.length);
@@ -111,8 +109,10 @@ const Skills = () => {
       className="relative w-screen flex items-center justify-center bg-secondary"
     >
       {/* <ParticlesBackground count={100} /> */}
-      <div className="relative max-w-6xl w-full flex flex-col px-4 py-[2rem] sm:py-[4rem]">
-        <h1 className="font-bold text-2xl mb-4 sm:mb-8 uppercase">Skills</h1>
+      <div className="relative max-w-6xl w-full flex flex-col px-4 py-[4rem]">
+        <h1 className="font-bold text-3xl mb-4 sm:mb-8 text-center sm:text-start">
+          Skills
+        </h1>
         <div className="grid grid-cols-3 md:grid-cols-5">
           {iconsArray.map(({ icon, name, href }, i) => (
             <div
@@ -128,14 +128,24 @@ const Skills = () => {
               />
               <motion.a
                 className={`absolute top-0 left-0 right-0 bottom-0 w-full h-32 md:h-40 flex flex-col items-center justify-center transition duration-500
+                  ${
+                    activeIndex === i && i % 2 === 0
+                      ? "bg-[rgba(23,23,23,0.8)]"
+                      : ""
+                  }
                     ${
-                      i % 2 !== 0
-                        ? "bg-[rgba(23,23,23,1)] hover:bg-[rgba(23,23,23,0.8)]"
+                      activeIndex === i && i % 2 !== 0
+                        ? "bg-[rgba(68,68,68,0.8)]"
                         : ""
                     }
+                      ${
+                        activeIndex !== i && i % 2 === 0
+                          ? "bg-[rgba(23,23,23,1)] hover:bg-[rgba(23,23,23,0.6)]"
+                          : ""
+                      }
                     ${
-                      i % 2 === 0
-                        ? "bg-[rgba(68,68,68,1)] hover:bg-[rgba(68,68,68,0.8)]"
+                      activeIndex !== i && i % 2 !== 0
+                        ? "bg-[rgba(68,68,68,1)] hover:bg-[rgba(68,68,68,0.6)]"
                         : ""
                     }
                 `}
@@ -143,24 +153,44 @@ const Skills = () => {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                {/* {activeIndex !== i && (
+                {activeIndex !== i && (
                   <div className="relative">
-                    <MouseParallax>
-                      <Image src={icon} alt={name} height={50} width={50} />
+                    <ScrollParallax>
+                      <div className="flex flex-col items-center">
+                        <div className="relative w-[50px] h-[50px]">
+                          <Image
+                            src={icon}
+                            alt={name}
+                            fill
+                            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                            className="object-contain"
+                          />
+                        </div>
+                        <span className="inline-block mt-2 text-xs md:text-base">
+                          {name}
+                        </span>
+                      </div>
+                    </ScrollParallax>
+                  </div>
+                )}
+                {/* <div className="relative">
+                  <ScrollParallax>
+                    <div className="flex flex-col items-center">
+                      <div className="relative w-[50px] h-[50px]">
+                        <Image
+                          src={icon}
+                          alt={name}
+                          fill
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                          className="object-contain"
+                        />
+                      </div>
                       <span className="inline-block mt-2 text-xs md:text-base">
                         {name}
                       </span>
-                    </MouseParallax>
-                  </div>
-                )} */}
-                <div className="relative">
-                  <ScrollParallax>
-                    <Image src={icon} alt={name} height={50} width={50} />
-                    <span className="inline-block mt-2 text-xs md:text-base">
-                      {name}
-                    </span>
+                    </div>
                   </ScrollParallax>
-                </div>
+                </div> */}
               </motion.a>
             </div>
           ))}

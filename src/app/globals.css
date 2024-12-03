@@ -39,7 +39,7 @@ html {
 }
 
 .gradient-text {
-  background: linear-gradient(to right top, #20adf2, #ce41e6);
+  background: linear-gradient(to bottom, #20adf2 50%, #fff 50%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }

@@ -6,10 +6,12 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="relative border-b border-tertiary bg-secondary w-screen h-fit flex flex-col items-center justify-center py-[2rem] sm:py-[4rem] overflow-hidden"
+      className="relative border-b border-tertiary bg-secondary w-screen h-fit flex flex-col items-center py-[2rem] sm:py-[4rem] overflow-hidden"
     >
       {/* <FuzzyOverlay /> */}
-      <h1 className="font-extrabold text-4xl capitalize mb-8">Get in touch</h1>
+      <h1 className="max-w-6xl px-4 font-bold text-3xl capitalize mb-8 text-center sm:text-start w-full">
+        Get in touch
+      </h1>
 
       <div className="max-w-6xl w-full grid lg:grid-cols-3 gap-4 px-4">
         <div className="relative flex items-center bg-tertiary p-4 overflow-hidden">

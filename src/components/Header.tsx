@@ -20,7 +20,6 @@ export default function Header() {
   const [isSideNavOpen, setIsSideNavOpen] = useState<boolean>(false);
   const headerRef = useRef<HTMLDivElement>(null);
   const sideNavRef = useRef<HTMLDivElement>(null);
-  const title = "KSB-DEV";
 
   const showSideNav = () => setIsSideNavOpen(true);
   const closeSideNav = () => setIsSideNavOpen(false);
@@ -47,13 +46,13 @@ export default function Header() {
           <div className="w-fit lg:max-w-[33.33%] lg:w-full lg:ml-2">
             <RevealAnimation>
               <motion.div
-                className="text-primary text-2xl font-extrabold"
+                className="text-primary text-3xl font-extrabold"
                 onClick={() => {
                   closeSideNav();
                   setIsSideNavOpen(false);
                 }}
               >
-                <FlipAnimation href="#home">{title}</FlipAnimation>
+                <FlipAnimation href="#home">KB</FlipAnimation>
               </motion.div>
             </RevealAnimation>
           </div>
