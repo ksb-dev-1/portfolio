@@ -109,8 +109,8 @@ const Skills = () => {
       className="relative w-screen flex items-center justify-center bg-secondary"
     >
       {/* <ParticlesBackground count={100} /> */}
-      <div className="relative max-w-6xl w-full flex flex-col px-4 py-[4rem]">
-        <h1 className="font-bold text-3xl mb-4 sm:mb-8 text-center sm:text-start">
+      <div className="relative max-w-6xl w-full flex flex-col px-4 py-[2rem] sm:py-[4rem]">
+        <h1 className="font-extrabold text-4xl mb-8 text-center sm:text-start">
           Skills
         </h1>
         <div className="grid grid-cols-3 md:grid-cols-5">

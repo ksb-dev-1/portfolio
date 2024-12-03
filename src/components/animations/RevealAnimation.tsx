@@ -45,10 +45,10 @@ export default function RevealAnimation({ children }: Props) {
       </motion.div>
 
       <motion.div
-        variants={{
-          hidden: { left: 0 },
-          visible: { left: "100%" },
-        }}
+        // variants={{
+        //   hidden: { left: 0 },
+        //   visible: { left: "100%" },
+        // }}
         // initial="hidden"
         // animate={slideControls}
         // transition={{ duration: 1, ease: "anticipate" }}

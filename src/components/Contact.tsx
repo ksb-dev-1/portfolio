@@ -9,7 +9,7 @@ const Contact = () => {
       className="relative border-b border-tertiary bg-secondary w-screen h-fit flex flex-col items-center py-[2rem] sm:py-[4rem] overflow-hidden"
     >
       {/* <FuzzyOverlay /> */}
-      <h1 className="max-w-6xl px-4 font-bold text-3xl capitalize mb-8 text-center sm:text-start w-full">
+      <h1 className="max-w-6xl px-4 font-extrabold text-4xl mb-8 text-center sm:text-start w-full capitalize">
         Get in touch
       </h1>
 

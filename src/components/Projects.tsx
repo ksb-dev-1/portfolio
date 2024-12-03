@@ -21,8 +21,8 @@ const Projects = () => {
         id="projects"
         className="relative w-screen flex justify-center bg-[#0A0A0A] overflow-hidden"
       >
-        <div className="relative max-w-6xl w-full flex flex-col px-4 py-[4rem]">
-          <h1 className="font-bold text-3xl mb-4 sm:mb-8 text-center sm:text-start">
+        <div className="relative max-w-6xl w-full flex flex-col px-4 py-[2rem] sm:py-[4rem]">
+          <h1 className="font-extrabold text-4xl mb-8 text-center sm:text-start">
             Projects
           </h1>
           <div className="grid lg:grid-cols-2 gap-8 lg:gap-16">
